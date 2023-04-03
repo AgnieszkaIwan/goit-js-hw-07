@@ -21,13 +21,14 @@ for (const item of galleryItems) {
   );
 }
 
-// galleryEl.addEventListener(“click”, (event) => {
-//   event.preventDefault();
-//   const box = basicLightbox.create(`<img src=“${event.target.dataset.source}“>`);
-//   box.show();
-// });
-// const rootEl = document.getElementById("app");
+galleryEl.addEventListener("click", (event) => event.preventDefault());
 
-// rootEl.addEventListener("click", (ev) => {
-//   ev.preventDefault();
-// });
+document.querySelector(".gallery").onclick = () => {
+  basicLightbox
+    .create(
+      `
+		<img width="1400" height="900" src="${event.target.dataset.source}">
+	`
+    )
+    .show();
+};
