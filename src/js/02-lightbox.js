@@ -21,6 +21,4 @@ galleryEl.addEventListener("click", (event) => event.preventDefault());
 var lightbox = new SimpleLightbox(".gallery li a", {
   captionDelay: 250,
   captionsData: "alt",
-  showCounter: true,
-  scrollbarWidth: 20,
 });
